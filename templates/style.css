@@ -34,7 +34,7 @@
 
 #profileImage
 {
-    cursor: pointer;
+    cursor: grab;
 }
 
 #profile-container {
