@@ -8,11 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ML API</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">   
+  <link rel="stylesheet" href="static/style.css">   
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
-  
 </head>
 
 <body>
@@ -34,17 +32,7 @@
      <div class="well text-center">
       <div class="row">
           <div class="col-md-6">
-            <image class="userImage rounded" id="profileImage" src="{{ prediction_img }}" alt="User Image" width="350" height="300"/>
-            <style>
-              image:before{
-                content: '';
-                display: block;
-                position: absolute;
-                height: 50px;
-                width: 100%;
-                background-image: url(Food1.jpg);
-              }
-            </style>
+            <image class="userImage rounded" id="profileImage" src="{{ prediction_img }}" alt="User Image"/>
           </div>
           <div class="col-md-6">
             <input id="imageUpload" type="file" class="form-control-file"
