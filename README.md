@@ -39,7 +39,7 @@ Models:
 
 - Resnet50.h5 – ResNet50 model output file
 
-## Folders
+## Reference Folders
 - Images: Images folder contains a sample set of images which the model trained
 
 - Templates: Front end HTML files
