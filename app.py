@@ -52,8 +52,8 @@ def predict():
           CATEGORY = json.load(json_file)
     output = CATEGORY[y_classes]
 
-    return render_template('index.html', prediction_text='The Image belongs to the classification of {}'.format(output),
-                            prediction_img=img_url)
+    return render_template('index.html', prediction_text=output, prediction_img=img_url)
+
 
 
 if __name__ == "__main__":
