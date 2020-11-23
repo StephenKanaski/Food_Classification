@@ -18,7 +18,9 @@ Identification of food which a user can then research to avoid potential allergi
 Data cleaning and pre-processing:
 
 Pickle.pynb – Initial image processing file which cycles through the images folder and generates pkl files
+
 Sequential.pynb – Processing file which takes pkl files generated from Pickle.pynb 
+
 Category.json – JSON file which contains the 101 categories of food
 
 Application:
@@ -26,7 +28,7 @@ App.py – Application file which runs the flask routes to handle the input and 
 
 Models:
 MobileNet.h5 – MobileNet model output file
-Resnet50.h5 – ResNet50 model output file
+
 Resnet50.h5 – ResNet50 model output file
 
 # Folders
