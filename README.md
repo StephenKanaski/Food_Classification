@@ -1,7 +1,7 @@
 Food Classification
 Emily Zhu, Raymond Garskovas, Stephen Kanaski, Surabhi Mukati
 
-![Food](https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/NFOJ7HCOWQI6VFT34B2NGAWH2Q.jpg&w=916)
+![Food](https://www.freepik.com/premium-photo/veggie-serving-table-with-snacks-with-vegetables-fruits-baba-ganoush-dip-spread-roasted-red-pepper-nuts-healthy-vegan-food-celebration-friends_8923566.html)
 
 # Food_Classification - Overview of project
 
