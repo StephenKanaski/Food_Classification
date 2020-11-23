@@ -1,7 +1,7 @@
 Food Classification
 Emily Zhu, Raymond Garskovas, Stephen Kanaski, Surabhi Mukati
 
-![alt text](https://github.com/spunase/Food_Classification/blob/static/images/default.jpg?raw=true)
+![alt text](https://github.com/spunase/Food_Classification/blob/main/static/images/default.jpg)
 
 # Food_Classification - Overview of project
 
