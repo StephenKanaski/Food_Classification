@@ -12,7 +12,7 @@ ANTICIPATED BENEFITS:•Identification of food which users see online for their 
 
 # Folders
 Images - Images folder contains a sample set of images which the model trained
-
+Templates - Front end HTML files
 
 
 # Food_Classification - Overview of project
