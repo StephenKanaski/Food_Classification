@@ -23,16 +23,21 @@ Sequential.pynb – Processing file which takes pkl files generated from Pickle.
 
 Category.json – JSON file which contains the 101 categories of food
 
+
 Application:
+
 App.py – Application file which runs the flask routes to handle the input and output
 
+
 Models:
+
 MobileNet.h5 – MobileNet model output file
 
 Resnet50.h5 – ResNet50 model output file
 
 # Folders
 Images - Images folder contains a sample set of images which the model trained
+
 Templates - Front end HTML files
 
 # Model detail
