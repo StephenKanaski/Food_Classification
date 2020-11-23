@@ -18,48 +18,28 @@
 </head>
 
 <body>
-
-  <header id="header-background">
- <div class="mx-auto text-center">
-  <p class="lead font-weight-normal">
-    <h1 class="mx-auto my-0 text-uppercase">Food Image Classification</h1>
-  </p>
-  
+ <div class="jumbotron">
+  <h1 class="display-4">Food Image Classification</h1>
+ </div> 
  <!-- Main Input For Receiving Query to our ML -->
- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, application to classify an image of your choice.</h2>
-</header>
- 
-<main>
-<div class="mx-auto text-center">
-<form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+ <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
      <label for="file">Choose file with the image you want to classify</label>
-    </p>
-     <div class="container">
+     <div class="well text-center">
+      <div class="col-md-12"></div>
       <div class="row">
-
-        <div class="col-md">
-          <input id="imageUpload" type="file" 
-                name="file" accept="image/x-png,image/gif,image/jpeg" required="" value="{{
-                  request.form.filename }}" capture>
-                  <button type="submit" BUTTON ONCLICK="ShowAndHide()" class="btn btn-primary js-scroll-trigger" value="submit">Predict</button>
-        </div>
-        <br>
-        <br>
-        <div id="profile-container" class="col-md">
-          <image id="profileImage"/>
+          <div class="col-md-6">
+            <image id="profileImage"/>
+          </div>
+          <div class="col-md-6">
+            <input id="imageUpload" type="file" 
+            name="file" accept="image/x-png,image/gif,image/jpeg" required="" value="{{
+              request.form.filename }}" capture>
+              <button type="submit" class="btn btn-primary btn-md" value="submit">Predict</button>
+          </div>
       </div>
-      </div>
-    </div>
-  </div> 
-  </main>
-
+  </div>
+   
   </form>
-
-  <div class="featured-text text-center text-lg-left">
-    <h4 class="mx-auto my-0 text-center">Results</h4>
-      <p class="text-black-50 mb-0">
-        Our model references a sequential CNN which was trained from a library of ~100,000 pre-processed images. The model will print which category of the 101 available the image is closest to.
-      </p>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   -->
     <script>
@@ -81,22 +61,13 @@
 
    <br>
    <br>
-   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" role="alert">
-    <SCRIPT>
-      function ShowAndHide() {
-          var x = document.getElementById('SectionName');
-          if (x.style.display == 'none') {
-              x.style.display = 'block';
-          } else {
-              x.style.display = 'none';
-          }
-      }
-      </SCRIPT>
-    <DIV ID="SectionName" STYLE="display:none">
-      <h3>The model's best category for the image is {{ prediction_text }}</h3>
-    </div>
+   <div class="alert alert-info" role="alert">
+    <h1 class="display-2">{{ prediction_text }}</h1>
    </div>
-  </div>
+   
+   
+
+ </div>
 
 </body>
 
