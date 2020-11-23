@@ -1,7 +1,7 @@
 Food Classification
 Emily Zhu, Raymond Garskovas, Stephen Kanaski, Surabhi Mukati
 
-![Food](https://www.freepik.com/premium-photo/veggie-serving-table-with-snacks-with-vegetables-fruits-baba-ganoush-dip-spread-roasted-red-pepper-nuts-healthy-vegan-food-celebration-friends_8923566.html)
+![alt text](https://github.com/spunase/Food_Classification/blob/images/image.jpg?raw=true)
 
 # Food_Classification - Overview of project
 
