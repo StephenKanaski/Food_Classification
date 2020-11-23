@@ -1,6 +1,8 @@
 Food Classification
 Emily Zhu, Raymond Garskovas, Stephen Kanaski, Surabhi Mukati
 
+![Food](https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/NFOJ7HCOWQI6VFT34B2NGAWH2Q.jpg&w=916)
+
 # Food_Classification - Overview of project
 
 Addressable Market:
