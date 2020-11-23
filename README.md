@@ -3,7 +3,7 @@ Emily Zhu, Raymond Garskovas, Stephen Kanaski, Surabhi Mukati
 
 ![alt text](https://github.com/spunase/Food_Classification/blob/main/static/images/default.jpg)
 
-# Food_Classification - Overview of project
+## Food_Classification - Overview of project
 
 Addressable Market:
 - Food posts are among the most popular images on social media platforms. Hashtags such as #foodie, #food, #foodporn, #foodphotography relate to hundreds of thousands of images per day
@@ -14,6 +14,8 @@ Project Scope:
 Anticipated Benefits:
 - Identification of food which users see online for their own reference
 - Identification of food which a user can then research to avoid potential allergies
+
+## File directory
 
 # Key Files
 
@@ -42,5 +44,5 @@ Models:
 
 - Templates: Front end HTML files
 
-# Model detail
+## Model detail
 CNN Sequential Model - For this model we are converting image data in to binary in pickle notebook and storing it in X.pickle(image data) and y.pickle(labels). In this model we tried 7 layers and got 46% testing accuracy.
