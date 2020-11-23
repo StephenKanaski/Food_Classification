@@ -7,46 +7,53 @@ import numpy as np
 import os
 import json
 
-app = Flask(__name__)
+IMAGES_FOLDER = os.path.join('static', 'images')
 
-model = load_model('model.h5')
-# import os
-# basedir = os.path.abspath(os.path.dirname(__file__))
-# class Config(object):
-#     UPLOAD_FOLDER = os.getcwd() + '/images/'
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = IMAGES_FOLDER
+# load the MobileNet model as it has the highest accuracy amongst all the models tested
+model = load_model('MobileNet.h5')
+
 
 @app.route('/')
+@app.route('/index')
 def home():
-    return render_template('index.html')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'default.jpg')
+    return render_template("index.html", prediction_img = full_filename)
 
 @app.route('/predict',methods=['GET', 'POST'])  
 def predict():
-    '''
-    For rendering results on HTML GUI
-    '''
+
+    # For rendering results on HTML GUI after predicting using the model
+    
+    # build the path to where the user images will be stored for later retrieval
     PATH = os.getcwd()
-    img_folder_path = os.path.join(PATH, "images")
+    # img_folder_path = os.path.join(PATH, "images")
 
-
+    # get the image file input by the user 
     f = request.files['file']
-    # filename = secure_filename(f.filename)
-    img_url = os.path.join(img_folder_path, f.filename)
+    
+    # build the image path and save it in the designated folder
+    img_url = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
     f.save(img_url)
-   
-    image_predict = image.load_img(img_url, target_size=(64,64))
+    
+    # preprocess the image as an array after adjusting it to target model's size requirement
+    image_predict = image.load_img(img_url, target_size=(224,224))
     image_predict = image.img_to_array(image_predict)
     image_predict = np.expand_dims(image_predict, axis=0)
 
+    # get the probability prediction and category index corresponding to it
     y_prob = model.predict(image_predict) 
     y_classes = int(y_prob.argmax(axis=-1))
 
 
-    # CATEGORY = os.listdir(img_folder_path)
+    # read the category.json file to convert the category index into a label
     with open('category.json') as json_file:
           CATEGORY = json.load(json_file)
     output = CATEGORY[y_classes]
 
-    return render_template('index.html', prediction_text='The Image belongs to the classification of {}'.format(output))
+    return render_template('index.html', prediction_text='The Image belongs to the classification of {}'.format(output),
+                            prediction_img=img_url)
 
 
 if __name__ == "__main__":

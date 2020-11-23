@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #header-background{
     width: 100%;
     height: 100%;
@@ -22,3 +23,60 @@
 #h1.a {
     color: black;
 }
+=======
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 30rem;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#userImage {
+    width: 100px;
+    height: 100px;
+    background-image: url('static/images/default.jpg')
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+>>>>>>> Stashed changes
