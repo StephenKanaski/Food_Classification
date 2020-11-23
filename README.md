@@ -12,30 +12,30 @@ Project Scope:
 An application which can take an image of food and output what the category of food is
 
 Anticipated Benefits:
-Identification of food which users see online for their own reference
-Identification of food which a user can then research to avoid potential allergies
+- Identification of food which users see online for their own reference
+- Identification of food which a user can then research to avoid potential allergies
 
 # Key Files
 
 Data cleaning and pre-processing:
 
-Pickle.pynb – Initial image processing file which cycles through the images folder and generates pkl files
+- Pickle.pynb – Initial image processing file which cycles through the images folder and generates pkl files
 
-Sequential.pynb – Processing file which takes pkl files generated from Pickle.pynb 
+- Sequential.pynb – Processing file which takes pkl files generated from Pickle.pynb 
 
-Category.json – JSON file which contains the 101 categories of food
+- Category.json – JSON file which contains the 101 categories of food
 
 
 Application:
 
-App.py – Application file which runs the flask routes to handle the input and output
+- App.py – Application file which runs the flask routes to handle the input and output
 
 
 Models:
 
-MobileNet.h5 – MobileNet model output file
+- MobileNet.h5 – MobileNet model output file
 
-Resnet50.h5 – ResNet50 model output file
+- Resnet50.h5 – ResNet50 model output file
 
 # Folders
 Images: Images folder contains a sample set of images which the model trained
