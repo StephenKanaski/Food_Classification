@@ -52,7 +52,7 @@ def predict():
           CATEGORY = json.load(json_file)
     output = CATEGORY[y_classes]
 
-    return render_template('index.html', prediction_text=output, prediction_img=img_url)
+    return render_template('index.html', prediction_text=output, prediction_img=img_url, prediction_narrative=" is the image classification as predicted by the model.")
 
 
 

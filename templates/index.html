@@ -16,13 +16,13 @@
 </head>
 
 <body>
- <!-- <div class="jumbotron">
-  <h1 class="display-6">Food Image Classification</h1>
- </div>  -->
  <!-- Image and text -->
-<nav class="navbar navbar-dark bg-dark">
-  <h1 class="display-6">Food Image Classification</h1>
-</nav>
+ <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Food Image Classification</h1>
+    <p class="lead">This app takes an image as an input from the user and uses a CNN MobileNet model to predict its classification.</p>
+  </div>
+</div>
  <!-- Main Input For Receiving Query to our ML -->
  <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
      <label for="file">Choose file with the image you want to classify</label>
@@ -33,44 +33,37 @@
             <image class="userImage" id="profileImage" src="{{ prediction_img }}" alt="User Image" width="350" height="300"/>
           </div>
           <div class="col-md-6">
-            <input id="imageUpload" type="file" 
+            <input id="imageUpload" type="file" class="form-control-file"
             name="file" accept="image/x-png,image/gif,image/jpeg" required="" value="{{
               request.form.filename }}" capture>
               <button type="submit" class="btn btn-primary btn-lg" value="submit">Predict</button>
           </div>
       </div>
-  </div>
+    </div>
+    <div class="alert alert-info" role="alert">
+      <h2 class="alert-heading">{{ prediction_text }}</h2>
+      <p class="mb-0">{{ prediction_narrative }}</p>
+    </div>
    
   </form>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    <script>
-      $("#profileImage").click(function(e) {
-        $("#imageUpload").click();
-    });
-    
-    function fasterPreview( uploader ) {
-        if ( uploader.files && uploader.files[0] ){
-              $('#profileImage').attr('src', 
-                window.URL.createObjectURL(uploader.files[0]));
-        }
-    }
-    
-    $("#imageUpload").change(function(){
-        fasterPreview( this );
-    });
-    </script>
-
-   <br>
-   <br>
-   <div class="alert alert-info" role="alert">
-      <h4 class="alert-heading">{{ prediction_text }}</h4>
-   </div>
-   
-   
-
- </div>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  
+  <script>
+    $("#profileImage").click(function(e) {
+      $("#imageUpload").click();
+  });
+  
+  function fasterPreview( uploader ) {
+      if ( uploader.files && uploader.files[0] ){
+            $('#profileImage').attr('src', 
+              window.URL.createObjectURL(uploader.files[0]));
+      }
+  }
+  
+  $("#imageUpload").change(function(){
+      fasterPreview( this );
+  });
+  </script>
 </body>
 
 </html>
