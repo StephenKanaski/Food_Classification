@@ -16,6 +16,7 @@ Identification of food which a user can then research to avoid potential allergi
 # Key Files
 
 Data cleaning and pre-processing:
+
 Pickle.pynb – Initial image processing file which cycles through the images folder and generates pkl files
 Sequential.pynb – Processing file which takes pkl files generated from Pickle.pynb 
 Category.json – JSON file which contains the 101 categories of food
