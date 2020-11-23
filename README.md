@@ -36,9 +36,9 @@ MobileNet.h5 – MobileNet model output file
 Resnet50.h5 – ResNet50 model output file
 
 # Folders
-Images - Images folder contains a sample set of images which the model trained
+Images: Images folder contains a sample set of images which the model trained
 
-Templates - Front end HTML files
+Templates: Front end HTML files
 
 # Model detail
 CNN Sequential Model - For this model we are converting image data in to binary in pickle notebook and storing it in X.pickle(image data) and y.pickle(labels). In this model we tried 7 layers and got 46% testing accuracy.
