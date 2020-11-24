@@ -39,10 +39,9 @@ Models:
 
 - Resnet50.h5 – ResNet50 model output file
 
+- food_seq_model.h5 - CNN Sequential model output file
+
 ### Reference Folders
 - Images - Images folder contains a sample set of images which the model trained
 
 - Templates - Front end HTML files
-
-## Model detail
-CNN Sequential Model - For this model we are converting image data in to binary in pickle notebook and storing it in X.pickle(image data) and y.pickle(labels). In this model we tried 7 layers and got 46% testing accuracy.
