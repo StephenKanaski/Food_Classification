@@ -15,8 +15,13 @@ Anticipated Benefits:
 - Identification of food which users see online for their own reference
 - Identification of food which a user can then research to avoid potential allergies
 
-Data Source:
-https://www.kaggle.com/kmader/food41
+Data Source and storage:
+- The orginial datasource is on Kaggle - [Link to our datasource!](https://www.kaggle.com/kmader/food41)
+- The data is currently stored in zip file stored in Google Cloud 
+
+Application:
+- Our project is deployed in the URL below. Upload and image to try our app!
+- [Food Classify Application!](https://foodclassify.herokuapp.com/)
 
 ## File directory
 
