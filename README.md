@@ -15,15 +15,20 @@ Anticipated Benefits:
 - Identification of food which users see online for their own reference
 - Identification of food which a user can then research to avoid potential allergies
 
+Data Source:
+https://www.kaggle.com/kmader/food41
+
 ## File directory
 
 ### Key Files
 
 Data cleaning and pre-processing:
 
-- Pickle.pynb – Initial image processing file which cycles through the images folder and generates pkl files
+- Pickle.ipynb – Initial image processing file which cycles through the images folder and generates pkl files
 
-- Sequential.pynb – Processing file which takes pkl files generated from Pickle.pynb 
+- Sequential.ipynb – Processing file which takes pkl files generated from Pickle.ipynb 
+
+- MobileNet.ipynb –  Notebook to preprocess, train, and test the model
 
 - Category.json – JSON file which contains the 101 categories of food
 
